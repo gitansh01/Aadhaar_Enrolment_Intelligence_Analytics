@@ -63,29 +63,63 @@ All three datasets were merged using common keys:
 ---
 
 ## 🔬 Methodology
-📥 Data Ingestion
-↓
-🧹 Data Cleaning & Preprocessing
-• Duplicate removal
-• Date standardisation
-• Null value handling
-• Data type verification
-↓
-🔗 Dataset Integration
-• Merged on: date, state, district, pincode
-↓
-📊 Exploratory Data Analysis (EDA)
-• Univariate & Bivariate Analysis
-• Temporal Trend Analysis
-• State & District Level Aggregations
-• Biometric Load Ratio Calculation
-↓
-📈 Visual Analytics
-• Bar Charts | Line Charts
-• Pipeline Drop-off Charts
-• Biometric Load Ratio Charts
-↓
-💡 Actionable Insights & Recommendations
+
+### 📥 Step 1 — Data Ingestion
+- Imported all three UIDAI datasets in CSV format
+- Loaded into Google Colab environment using the **Pandas** library
+- Enabled scalable and reproducible analysis via Jupyter Notebook
+
+---
+
+### 🧹 Step 2 — Data Cleaning & Preprocessing
+- Removed duplicate records generated due to multiple file uploads
+- Standardised column names across all three datasets
+- Converted date fields from object type to proper **datetime format**
+- Handled missing values by replacing nulls with zero where applicable
+- Verified data types for all numerical columns to ensure accurate aggregation
+
+---
+
+### 🔗 Step 3 — Dataset Integration
+- Merged all three datasets into a **unified analytical framework**
+- Common merge keys used:
+
+| Key | Description |
+|-----|-------------|
+| `date` | Month and year of record |
+| `state` | Name of the state |
+| `district` | Name of the district |
+| `pincode` | Area pincode |
+
+---
+
+### 📊 Step 4 — Exploratory Data Analysis (EDA)
+- **Univariate Analysis** — Overall enrolment volumes by age group
+- **Bivariate Analysis** — Enrolment activity across states and time periods
+- **Temporal Analysis** — Monthly trends and demand fluctuations
+- **Comparative Analysis** — Enrolment vs demographic vs biometric updates
+- Aggregations performed at **state-level** and **monthly-level**
+
+---
+
+### 📈 Step 5 — Visual Analytics
+All visualisations were built using **Matplotlib** with focus on clarity and policy relevance:
+
+| Visual | Purpose |
+|--------|---------|
+| Bar Charts | Top states by enrolment and biometric capture share |
+| Line Charts | Monthly enrolment trends across age groups |
+| Pipeline Drop-off Chart | Enrolment vs demographic vs biometric stage comparison |
+| Biometric Load Ratio Chart | Biometric capture trends over time by age group |
+| District Hotspot Chart | Top districts by demographic activity volume |
+
+---
+
+### 💡 Step 6 — Actionable Insights & Recommendations
+- Identified regions with disproportionately high or low enrolment activity
+- Highlighted age groups driving enrolment and biometric demand
+- Detected mismatches between enrolment volumes and update activity
+- Translated all findings into evidence-based recommendations for UIDAI
 
 ---
 
@@ -142,15 +176,6 @@ serving as a **performance stress indicator** for infrastructure upgrades.
 | ⚙️ **Operational** | Identify hotspots, reduce pipeline drop-offs, optimise biometric infrastructure deployment |
 | 📋 **Policy & Planning** | Enable proactive seasonal capacity planning and age-specific outreach programs |
 | 🏛️ **Governance** | Bridge raw administrative data with evidence-based decision-making for UIDAI |
-
----
-
-## 📁 Repository Structure
-Aadhaar_Enrolment_Intelligence_Analytics/
-│
-├── 📓 UIDAI_Hackathon_Analysis.ipynb   → Full analysis notebook
-├── 📄 Report.pdf                        → Structured project report
-└── 📝 README.md                         → Project documentation
 
 ---
 
